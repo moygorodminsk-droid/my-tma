@@ -181,7 +181,6 @@ export default function App() {
         new Promise((res, rej) => {
           if (!tg) return rej(new Error("SDK недоступен"));
           tg.readTextFromClipboard((text) => {
-            // text — реальное значение: строка или null
             res({ called: "readTextFromClipboard", callback_arg: text, type: typeof text });
           });
         }),
