@@ -1,7 +1,7 @@
 // src/App.jsx
 import { useEffect, useState, useCallback } from "react";
 
-const API_URL = import.meta.env.VITE_API_URL;
+const API_URL = (import.meta.env.VITE_API_URL || "").replace(/\/+$/, "");
 const tg = window.Telegram?.WebApp;
 
 function useLog() {
