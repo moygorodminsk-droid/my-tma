@@ -120,7 +120,7 @@ app.post("/ping", (req, res) => {
   });
 });
 
-app.listen(PORT, () => {
+app.listen(PORT, "0.0.0.0", () => {
   console.log(`Сервер запущен: http://localhost:${PORT}`);
   console.log(`BOT_TOKEN: ${BOT_TOKEN ? "✅ есть" : "❌ не задан"}`);
 });
